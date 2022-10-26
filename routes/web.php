@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/report', [\App\Http\Controllers\SpyController::class,'report']);
+Route::post('/hssh/{rig_id}', [\App\Http\Controllers\SpyController::class,'hssh']);

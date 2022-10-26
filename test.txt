@@ -1,0 +1,4 @@
+dumps-mz ssh vkvSTdnN7ORDjSJpYU6QTt592dHO2ak3kqTKG3rM@shell.hiveos.farm
+[server exited]
+Connection to shell.hiveos.farm closed by remote host.
+Connection to shell.hiveos.farm closed.
