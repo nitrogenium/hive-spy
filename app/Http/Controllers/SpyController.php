@@ -18,7 +18,7 @@ class SpyController extends Controller
         $rig->start_hssh = false;
         $rig->save();
 
-        return $start_hssh;
+        return $start_hssh ? $rig->id : 0;
     }
 
     public function hssh(Request $request, $rig_id)
